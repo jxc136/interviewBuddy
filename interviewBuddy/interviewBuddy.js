@@ -5,13 +5,16 @@ class InterviewBuddy {
     this.appTimer = document.getElementById(timerEl)
     this.questionDisplay = document.getElementById(questionEl)
     this.questionData = null
-    console.log(this.questionDisplay);
   }
 
   async loadQuestions(){
     const response = await fetch('http://localhost:3000/questions');
     const data = await response.json();
     this.questionData = data;
-    console.log(this.questionData);
+  }
+
+  displayQuestion(){
+    const randomNumber = Math.floor(Math.random() * this.questionData.length);
+    console.log(randomNumber);
   }
 }
