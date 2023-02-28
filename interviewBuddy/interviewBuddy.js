@@ -19,4 +19,8 @@ class InterviewBuddy {
     this.questionDisplay.innerText = randomQuestion;
     console.log(randomQuestion);
   }
+  
+  async appInit(){
+
+  }
 }
