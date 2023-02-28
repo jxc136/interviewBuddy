@@ -5,6 +5,9 @@ class InterviewBuddy {
     this.appTimer = document.getElementById(timerEl)
     this.questionDisplay = document.getElementById(questionEl)
     console.log(this.questionDisplay);
-  
+  }
+
+  async loadQuestions(){
+    
   }
 }
