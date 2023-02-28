@@ -9,8 +9,8 @@ class InterviewBuddy {
   }
 
   async loadQuestions(){
-    const response = await fetch('questions.json');
-    const data = response.json;
+    const response = await fetch('http://localhost:3000/questions');
+    const data = await response.json();
     this.questionData = data;
     console.log(this.questionData);
   }
