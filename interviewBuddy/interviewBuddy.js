@@ -11,10 +11,14 @@ class InterviewBuddy {
     const response = await fetch('http://localhost:3000/questions');
     const data = await response.json();
     this.questionData = data;
+    const randomNumber = Math.floor(Math.random() * this.questionData.length);
+    const randomQuestion = this.questionData[randomNumber];
+    console.log(randomQuestion);
   }
 
   displayQuestion(){
     const randomNumber = Math.floor(Math.random() * this.questionData.length);
-    console.log(randomNumber);
+    const randomQuestion = this.questionData[randomNumber];
+    console.log(randomQuestion);
   }
 }
