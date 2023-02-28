@@ -1,9 +1,10 @@
 class InterviewBuddy {
 
-  constructor(buttonID) {
+  constructor(buttonID, timerEl) {
     this.startButton = document.getElementById(buttonID);
-    console.log(this.startButton);
-    // this.appTimer = 
+    this.appTimer = document.getElementById(timerEl)
+    console.log(this.appTimer);
+   
     // this.questionDisplay = 
   }
 }
