@@ -50,8 +50,12 @@
   color: #555;
 }
 
-
-
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
 .button {
   background-color: #0C6DFD;
