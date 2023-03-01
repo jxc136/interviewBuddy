@@ -21,6 +21,9 @@ class InterviewBuddy {
   }
   
   async appInit(){
-
+    await this.loadQuestions();
+    this.startButton.addEventListener("click", () => {
+      this.displayQuestion();
+    })
   }
 }
