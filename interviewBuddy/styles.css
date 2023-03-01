@@ -9,6 +9,11 @@
   overflow: hidden;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .header { 
   color: white;
   text-align: left;
@@ -42,8 +47,6 @@
   position: relative;
   max-width: 800px;
 }
-
-
 
 .timer {
   position: absolute;
