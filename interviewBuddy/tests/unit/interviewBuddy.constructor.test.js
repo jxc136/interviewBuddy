@@ -32,7 +32,7 @@ describe ('InterviewBuddy constructor', () => {
       <body>
         <div>
           <button id="start-button">New Question</button>
-          <p id="timer"></p>
+          <p id="timer">1:00</p>
           <p id="question-display"></p>
         </div>
       </body>
@@ -44,6 +44,8 @@ describe ('InterviewBuddy constructor', () => {
     "question-display"
   );
     expect(interviewBuddy.startButton.textContent).toBe('New Question');
+    expect(interviewBuddy.appTimer.textContent).toBe('1:00');
+    
   });
 })
 // 1. It loads the startButton correctly
