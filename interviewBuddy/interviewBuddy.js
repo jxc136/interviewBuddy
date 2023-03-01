@@ -3,6 +3,7 @@ class InterviewBuddy {
   constructor(buttonID, timerEl, questionEl) {
     this.startButton = document.getElementById(buttonID);
     this.appTimer = document.getElementById(timerEl)
+    console.log(this.appTimer.innerText);
     this.questionDisplay = document.getElementById(questionEl)
     this.questionData = null
   }
@@ -17,13 +18,22 @@ class InterviewBuddy {
     const randomNumber = Math.floor(Math.random() * this.questionData.length);
     const randomQuestion = this.questionData[randomNumber];
     this.questionDisplay.innerText = randomQuestion;
-    console.log(randomQuestion);
+  }
+
+  startTimer(){
+    let countdown = 60;
+    this.appTimer.innerText = countdown;
+    setInterval(() => {
+    countdown --;
+    this.appTimer.innerText = countdown;
+    }, 1000)
   }
   
   async appInit(){
     await this.loadQuestions();
     this.startButton.addEventListener("click", () => {
       this.displayQuestion();
+      this.startTimer();
     })
   }
 }
