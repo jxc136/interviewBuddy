@@ -4,8 +4,9 @@ class InterviewBuddy {
     this.startButton = document.getElementById(buttonID);
     this.appTimer = document.getElementById(timerEl)
     console.log(this.appTimer.innerText);
-    this.questionDisplay = document.getElementById(questionEl)
-    this.questionData = null
+    this.questionDisplay = document.getElementById(questionEl);
+    this.questionData = null;
+    this.timerInterval = null;
   }
 
   async loadQuestions(){
@@ -23,9 +24,13 @@ class InterviewBuddy {
   startTimer(){
     let countdown = 60;
     this.appTimer.innerText = countdown;
-    setInterval(() => {
+
+    this.timerInterval = setInterval(() => {
     countdown --;
     this.appTimer.innerText = countdown;
+    if (countdown === 0) {
+      clearInterval(this.timerInterval)
+    }
     }, 1000)
   }
   
