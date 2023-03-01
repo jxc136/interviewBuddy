@@ -45,6 +45,7 @@ describe ('InterviewBuddy constructor', () => {
   );
     expect(interviewBuddy.startButton.textContent).toBe('New Question');
     expect(interviewBuddy.appTimer.textContent).toBe('1:00');
+    expect(interviewBuddy.questionDisplay).toBeDefined();
     
   });
 })
