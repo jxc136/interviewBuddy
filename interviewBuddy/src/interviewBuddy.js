@@ -2,8 +2,8 @@ class InterviewBuddy {
 
   constructor(buttonID, timerEl, questionEl) {
     this.startButton = document.getElementById(buttonID);
+    console.log(this.startButton);
     this.appTimer = document.getElementById(timerEl)
-    console.log(this.appTimer.innerText);
     this.questionDisplay = document.getElementById(questionEl);
     this.questionData = null;
     this.timerInterval = null;
@@ -45,3 +45,5 @@ class InterviewBuddy {
     })
   }
 }
+
+module.exports = InterviewBuddy;
