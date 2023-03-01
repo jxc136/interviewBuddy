@@ -49,8 +49,3 @@ describe ('InterviewBuddy constructor', () => {
     
   });
 })
-// 1. It loads the startButton correctly
-
-// 2. It loads the appTimer correctly
-
-// 3. It loads the questionDisplaycorrectly
