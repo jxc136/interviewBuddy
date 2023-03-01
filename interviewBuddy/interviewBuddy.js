@@ -38,6 +38,9 @@ class InterviewBuddy {
     await this.loadQuestions();
     this.startButton.addEventListener("click", () => {
       this.displayQuestion();
+      if (this.timerInterval) {
+        clearInterval(this.timerInterval);
+      }
       this.startTimer();
     })
   }
