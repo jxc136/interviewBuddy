@@ -2,11 +2,18 @@
 <html>
 <head>
 	<title>Interview Question Practice</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<button id="start-button">Start</button>
-	<p id="timer">1:00</p>
-	<p id="question-display"></p>
+  <div class="app-container">
+    <h1>interviewBuddy</h1>
+ </div>
+  
+  <button id="start-button">New Question</button>
+    <p>Time remaining:</p>
+    <p id="timer">1:00</p>
+    <p id="question-display"></p>
+
 	<script src="interviewBuddy.js"></script>
   <script>
     const interviewBuddy = new InterviewBuddy("start-button","timer", "question-display");

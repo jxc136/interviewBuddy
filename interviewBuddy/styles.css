@@ -1,0 +1,9 @@
+.app-container {
+  height: 325px;
+  width: 100%;
+  background-image: url("public/hero_image.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
