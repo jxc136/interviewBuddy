@@ -7,11 +7,11 @@ describe ('InterviewBuddy loadQuestions', () => {
     fetch.resetMocks();
   });
 
-  test('loads the class properties correctly', async () => {
+  test('fetches data and stores it in the questionData property', async () => {
     const interviewBuddy = new InterviewBuddy();
     fetch.mockResponseOnce(JSON.stringify({ data: [
       "What are the benefits of a SQL database over other types of data-stores?",
-      "How often do you refactor your code?"
+      "How often do you refactor your code?"  
     ]
     }));
     await interviewBuddy.loadQuestions();

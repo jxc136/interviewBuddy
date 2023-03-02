@@ -4,6 +4,7 @@ class InterviewBuddy {
     this.startButton = document.getElementById(buttonID);
     this.appTimer = document.getElementById(timerEl)
     this.questionDisplay = document.getElementById(questionEl);
+    console.log(this.questionDisplay);
     this.questionData = null;
     this.timerInterval = null;
   }
