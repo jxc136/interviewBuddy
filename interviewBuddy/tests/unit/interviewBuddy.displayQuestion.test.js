@@ -18,12 +18,12 @@ describe ('InterviewBuddy displayQuestion', () => {
     mockInterviewBuddy.questionDisplay = { innerText: '' }; // Mock questionDisplay element
   });
 
-  it('displays a random question', () => {
+  test ('displays a random interview question from the questionData', () => {
     // Spy on the Math object and control its output
     jest.spyOn(Math, 'random').mockReturnValue(0.5);
 
     mockInterviewBuddy.displayQuestion();
-    
+
     expect(mockInterviewBuddy.questionDisplay.innerText).toEqual('How often do you refactor your code?');
   })
 });

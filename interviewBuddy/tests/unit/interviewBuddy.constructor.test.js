@@ -4,26 +4,6 @@ const InterviewBuddy = require('../../src/interviewBuddy.js');
  */
 
 describe ('InterviewBuddy constructor', () => {
-  // let interviewBuddy;
-  // beforeAll(() => {
-  //   const dom = new JSDOM(`
-  //     <!DOCTYPE html>
-  //     <html>
-  //       <body>
-  //         <div>
-  //           <button id="start-button"></button>
-  //           <p id="timer"></p>
-  //           <p id="question-display"></p>
-  //         </div>
-  //       </body>
-  //     </html>
-  //   `);
-  //   const interviewBuddy = new InterviewBuddy(
-  //     "start-button",
-  //     "timer",
-  //     "question-display"
-  //   );
-  // });
 
   test('loads the class properties correctly', () => {
     document.body.innerHTML = `
@@ -43,9 +23,9 @@ describe ('InterviewBuddy constructor', () => {
     "timer",
     "question-display"
   );
-    expect(interviewBuddy.startButton.textContent).toBe('New Question');
-    expect(interviewBuddy.appTimer.textContent).toBe('1:00');
-    expect(interviewBuddy.questionDisplay).toBeDefined();
-    
+  expect(interviewBuddy.startButton.textContent).toBe('New Question');
+  expect(interviewBuddy.appTimer.textContent).toBe('1:00');
+  expect(interviewBuddy.questionDisplay).toBeDefined();
+  
   });
 })
