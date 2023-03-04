@@ -4,7 +4,6 @@ class InterviewBuddy {
     this.startButton = document.getElementById(buttonID);
     this.appTimer = document.getElementById(timerEl)
     this.questionDisplay = document.getElementById(questionEl);
-    console.log(this.questionDisplay);
     this.questionData = null;
     this.timerInterval = null;
   }
@@ -29,15 +28,17 @@ class InterviewBuddy {
   startTimer(){
     let countdown = 60;
     this.appTimer.innerText = countdown;
-
+  
     this.timerInterval = setInterval(() => {
-    countdown --;
-    this.appTimer.innerText = countdown;
-    if (countdown === 0) {
-      clearInterval(this.timerInterval)
-    }
-    }, 1000)
+      countdown --;
+      this.appTimer.innerText = countdown;
+      if (countdown === 0) {
+        clearInterval(this.timerInterval)
+        this.timerInterval = null;
+      }
+    }, 1000);
   }
+  
   
   async appInit(){
     await this.loadQuestions();

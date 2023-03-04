@@ -1,5 +1,5 @@
 const InterviewBuddy = require('../../src/interviewBuddy.js');
-
+require("jest-fetch-mock").enableMocks();
 /**
  * @jest-environment jsdom
  */
@@ -13,6 +13,7 @@ describe('InterviewBuddy appInit', () => {
       <p id="timer"></p>
       <p id="question-display"></p>
     `;
+    fetch.resetMocks();
 
     interviewBuddy = new InterviewBuddy('start-button', null, null);
   });
