@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Interview Question Practice</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div class="app-container">
-    <div class="header">interviewBuddy</div>
-    <div class="oneliner">Ace your next interview with random practice questions.</div>
- </div>
- 
- <div class="card">
-  <p class="timer" id="timer">1:00</p>
-  <p class="question" id="question-display"></p>
-</div>
+  <head>
+    <title>Interview Question Practice</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="header">interviewBuddy</div>
+      <div class="oneliner">
+        Ace your next interview with random practice questions.
+      </div>
+    </div>
 
-<div class="button-container">
-  <button class="button" id="start-button">New Question</button>
-</div>
+    <div class="card">
+      <p class="timer" id="timer">1:00</p>
+      <p class="question" id="question-display"></p>
+    </div>
 
+    <div class="button-container">
+      <button class="button" id="start-button">New Question</button>
+    </div>
 
-	<script src="src/interviewBuddy.js"></script>
-  <script>
-    const interviewBuddy = new InterviewBuddy("start-button","timer", "question-display");
-          interviewBuddy.appInit();
-       
-  </script>
-</body>
+    <script src="src/interviewBuddy.js"></script>
+    <script>
+      const interviewBuddy = new InterviewBuddy(
+        "start-button",
+        "timer",
+        "question-display"
+      );
+      interviewBuddy.appInit();
+    </script>
+  </body>
 </html>

@@ -1,10 +1,10 @@
-const InterviewBuddy = require('../../src/interviewBuddy.js');
+const InterviewBuddy = require("../../src/interviewBuddy.js");
 require("jest-fetch-mock").enableMocks();
 /**
  * @jest-environment jsdom
  */
 
-describe('InterviewBuddy appInit', () => {
+describe("InterviewBuddy appInit", () => {
   let interviewBuddy;
 
   beforeEach(() => {
@@ -15,15 +15,15 @@ describe('InterviewBuddy appInit', () => {
     `;
     fetch.resetMocks();
 
-    interviewBuddy = new InterviewBuddy('start-button', null, null);
+    interviewBuddy = new InterviewBuddy("start-button", null, null);
   });
 
-  test('adds a click event listener to the start button with the correct callback functions', async () => {
+  test("adds a click event listener to the start button with the correct callback functions", async () => {
     // Function called when appInit is called
     interviewBuddy.loadQuestions = jest.fn();
-    // Functions called when a click happens 
-    interviewBuddy.displayQuestion = jest.fn(); 
-    interviewBuddy.startTimer = jest.fn(); 
+    // Functions called when a click happens
+    interviewBuddy.displayQuestion = jest.fn();
+    interviewBuddy.startTimer = jest.fn();
 
     await interviewBuddy.appInit();
     expect(interviewBuddy.loadQuestions).toHaveBeenCalled();
