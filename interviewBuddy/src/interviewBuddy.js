@@ -12,8 +12,12 @@ class InterviewBuddy {
       const response = await fetch("http://localhost:3000/questions");
       const data = await response.json();
       this.questionData = data;
+      console.log(`[${new Date().toISOString()}] Question data loaded`);
     } catch (error) {
-      console.error("Error while fetching questions:", error);
+      console.error(
+        `[${new Date().toISOString()}] Error while fetching questions:`,
+        error
+      );
     }
   }
 
@@ -21,12 +25,15 @@ class InterviewBuddy {
     const randomNumber = Math.floor(Math.random() * this.questionData.length);
     const randomQuestion = this.questionData[randomNumber];
     this.questionDisplay.innerText = randomQuestion;
+    console.log(
+      `[${new Date().toISOString()}] Question displayed: ${randomQuestion}`
+    );
   }
 
   startTimer() {
     let countdown = 60;
     this.appTimer.innerText = countdown;
-
+    console.log(`[${new Date().toISOString()}] Timer started`);
     this.timerInterval = setInterval(() => {
       countdown--;
       this.appTimer.innerText = countdown;
@@ -40,6 +47,7 @@ class InterviewBuddy {
   async appInit() {
     await this.loadQuestions();
     this.startButton.addEventListener("click", () => {
+      console.log(`[${new Date().toISOString()}] New question button clicked`);
       this.displayQuestion();
       if (this.timerInterval) {
         clearInterval(this.timerInterval);
@@ -48,5 +56,4 @@ class InterviewBuddy {
     });
   }
 }
-
 module.exports = InterviewBuddy;
