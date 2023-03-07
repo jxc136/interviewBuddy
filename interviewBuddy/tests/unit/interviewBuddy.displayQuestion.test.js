@@ -14,11 +14,11 @@ describe("InterviewBuddy displayQuestion", () => {
       "How often do you refactor your code?",
       "What is your experience with test-driven development?",
     ];
-    mockInterviewBuddy.questionDisplay = { innerText: "" }; // Mock questionDisplay element
+    mockInterviewBuddy.questionDisplay = { innerText: "" };
   });
 
   test("displays a random interview question from the questionData", () => {
-    // Spy on the Math object and control its output
+    // We generate a random number in our function so this must be mocked
     jest.spyOn(Math, "random").mockReturnValue(0.5);
 
     mockInterviewBuddy.displayQuestion();

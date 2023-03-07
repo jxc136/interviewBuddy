@@ -5,7 +5,7 @@ describe("InterviewBuddy startTimer", () => {
 
   beforeEach(() => {
     mockInterviewBuddy = new InterviewBuddy(null, "timer", null);
-    mockInterviewBuddy.appTimer = { innerText: "" }; // Mock appTimer element
+    mockInterviewBuddy.appTimer = { innerText: "" };
     jest.useFakeTimers();
   });
 

@@ -44,6 +44,7 @@ describe("InterviewBuddy integration test", () => {
     expect(interviewBuddy.timerInterval).toBeDefined();
     expect(interviewBuddy.appTimer.innerText).toEqual(60);
 
+    // When we click the button we need time for our callback functions to fire
     await waitFor(() => {
       // Test ID needed because waitFor ignores our mock HTML
       expect(screen.getByTestId("question-display").textContent).toBeDefined();

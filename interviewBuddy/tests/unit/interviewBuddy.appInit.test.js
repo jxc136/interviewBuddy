@@ -19,9 +19,9 @@ describe("InterviewBuddy appInit", () => {
   });
 
   test("adds a click event listener to the start button with the correct callback functions", async () => {
-    // Function called when appInit is called
+    // Function called when appInit is called:
     interviewBuddy.loadQuestions = jest.fn();
-    // Functions called when a click happens
+    // Functions called when a click happens:
     interviewBuddy.displayQuestion = jest.fn();
     interviewBuddy.startTimer = jest.fn();
 
