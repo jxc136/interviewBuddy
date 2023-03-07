@@ -1,4 +1,4 @@
-const InterviewBuddy = require("../../src/interviewBuddy.js");
+const InterviewBuddy = require("../../src/interviewbuddy.js");
 require("jest-fetch-mock").enableMocks();
 /**
  * @jest-environment jsdom

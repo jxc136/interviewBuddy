@@ -1,4 +1,4 @@
-const InterviewBuddy = require("../../src/interviewBuddy.js");
+const InterviewBuddy = require("../../src/interviewbuddy.js");
 const { waitFor, screen } = require("@testing-library/dom");
 
 require("jest-fetch-mock").enableMocks();
