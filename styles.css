@@ -46,6 +46,12 @@ body {
   align-items: center;
   position: relative;
   max-width: 800px;
+  text-align: center;
+}
+
+.question {
+  max-width: 600px;
+  word-wrap: break-word;
 }
 
 .timer {
