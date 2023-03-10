@@ -42,7 +42,7 @@ Through creating this application, I improved my ability to:
 
 1. Clone this repo
 2. Install dependencies with `npm install`
-3. Start the Json server with the command json-server --watch data/db.json
+3. Start the Json server with the command `json-server --watch data/db.json`
 4. Open the index.html file in your browser 
 5. Run tests with npm run test or npx jest
 
